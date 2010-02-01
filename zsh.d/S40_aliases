@@ -41,6 +41,7 @@ alias llr='ls -ld **/*(.)'
 
 alias lsdr='ls -d **/*(/)'
 alias lldr='ls -ld **/*(/)'
+alias base64='gbase64'
 
 # Standard stuff
 alias mv='nocorrect mv'       # no spelling correction on mv
