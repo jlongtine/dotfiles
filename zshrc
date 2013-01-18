@@ -17,3 +17,5 @@ for zshrc_snipplet in ~/.zsh.d/S[0-9][0-9]*[^~] ; do
   echo_msg green loading ${zshrc_snipplet##*/}
   source $zshrc_snipplet
 done
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -3,7 +3,7 @@
 umask 0002
 
 typeset -U path
-path=(~/bin ~/local/bin /usr/local/bin $path)
+path=(~/bin ~/local/bin /usr/local/bin /usr/local/sbin $path)
 
 export EDITOR=vim
 
@@ -18,3 +18,7 @@ fi
 __which() {
     /usr/bin/which $1 >/dev/null
 }
+
+[[ -s "/Users/joellongtine/.rvm/scripts/rvm" ]] && source "/Users/joellongtine/.rvm/scripts/rvm"
+
+export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"

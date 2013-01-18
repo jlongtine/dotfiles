@@ -1,6 +1,6 @@
 [user]
-  name =
-  email =
+	name = Joel Longtine
+	email = joel@callisto.fm
 [github]
   user =
   token =
@@ -37,16 +37,17 @@
   sdcommit = !git stash && git svn dcommit && git stash pop
 
   purge-remote = !sh -c 'echo git branch -a | echo sed -n \"/master$/d;s?^ *remotes/$0/??p\"'
-[mergetool "mvimdiff"]
-  cmd = mvimdiff \"$LOCAL\" \"$REMOTE\" \"$MERGED\" \"$BASE\"
-[mergetool "p4merge"]
-  cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-  trustExitCode = false
-[mergetool]
-  keepBackup = false
+[diff] 
+  tool = araxis
 [merge]
-  tool = p4merge
+  tool = araxis
 [push]
   default = current
 [core]
-  excludesfile = /Users/wade/.gitignore
+	excludesfile = /Users/joellongtine/.gitignore_global
+[difftool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/araxiscompare-w.sh -2 \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/araxisgitmerge-w.sh \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\"
+	trustExitCode = true

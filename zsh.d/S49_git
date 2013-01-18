@@ -1,9 +1,13 @@
 #!/bin/zsh
 
 # Make sure nobody gets these settings by accident
-if [ "$USER" = "wade" ]; then
-    export GIT_AUTHOR_NAME="Wade Simmons"
-    export GIT_AUTHOR_EMAIL="wade@wades.im"
+if [ "$USER" = "joellongtine" ]; then
+    export GIT_AUTHOR_NAME="Joel Longtine"
+    export GIT_AUTHOR_EMAIL="joel@joellongtine.com"
+fi
+
+if which hub &> /dev/null;
+then alias git=hub
 fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
