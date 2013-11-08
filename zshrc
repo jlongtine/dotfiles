@@ -19,3 +19,5 @@ for zshrc_snipplet in ~/.zsh.d/S[0-9][0-9]*[^~] ; do
 done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

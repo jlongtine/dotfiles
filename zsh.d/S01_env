@@ -3,7 +3,7 @@
 umask 0002
 
 typeset -U path
-path=(~/bin ~/local/bin /usr/local/bin /usr/local/sbin $path)
+path=(~/bin/play ~/bin ~/local/bin /usr/local/bin /usr/local/sbin /usr/local/share/python $path)
 
 export EDITOR=vim
 
@@ -22,3 +22,5 @@ __which() {
 [[ -s "/Users/joellongtine/.rvm/scripts/rvm" ]] && source "/Users/joellongtine/.rvm/scripts/rvm"
 
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+
+source /usr/local/share/python/virtualenvwrapper.sh
